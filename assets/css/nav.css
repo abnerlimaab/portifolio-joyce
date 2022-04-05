@@ -1,0 +1,20 @@
+.menu {
+    position: fixed;
+    top: 56px;
+    right: 100px;
+}
+
+.menu-bar {
+    display: flex;
+    flex-direction: row;
+}
+
+.menu-item {
+    color: var(--branco);
+    font-size: 16px;
+    margin-right: 27px;
+}
+
+.menu-item_ativo {
+    color: var(--amarelo);
+}
