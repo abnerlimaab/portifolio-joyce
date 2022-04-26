@@ -33,10 +33,9 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	margin-top: 5.5rem;
-
+	overflow: hidden;
 	line-height: 1;
-	background-color: ${({theme}) => theme.colors.background};
-
+	background-color: transparent;
 	font-family: ${({theme}) => theme.fonts.regular}, sans-serif;
 	font-size: 16px;
 	color: ${({theme}) => theme.colors.text};
