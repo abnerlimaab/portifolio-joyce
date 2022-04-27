@@ -58,15 +58,15 @@ export const Photo = styled.img`
     height: 430px;
     position: absolute;
     border-radius: 50%;
-    border: 10px solid ${({theme}) => theme.colors.background};
+    border: 10px solid ${({theme}) => theme.colors.primary};
     z-index: 100;
 
-    animation: colorir 2s alternate-reverse 1s infinite;
-    
-    @keyframes colorir {
+    animation: colorize 5s steps(60, end) 0s infinite alternate-reverse;
+
+    @keyframes colorize {
         100% {
-            border: 10px solid ${({theme}) => theme.colors.secundary};
-        }
+            border: 10px solid ${({theme}) => theme.colors.tertiary};
+        };
     }
 `;
 

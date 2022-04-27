@@ -1,7 +1,9 @@
 export default {
   colors: {
     background: "#21201E",
-    secundary: "#FEA609",
+    primary: "#FEA609",
+    secundary: "#3F9A4E",
+    tertiary: "#00826F",
     shape: "#2D2B29",
     text_dark: "#9B968B",
     text: "#FFFFFF",

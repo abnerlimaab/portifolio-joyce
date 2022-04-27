@@ -16,7 +16,7 @@ export const MenuList = styled.ul`
 `;
 
 export const MenuItem = styled.li<MenuItemProps>`
-    color: ${({theme, isActive}) => isActive ? theme.colors.secundary : theme.colors.text};
+    color: ${({theme, isActive}) => isActive ? theme.colors.primary : theme.colors.text};
     font-size: 16px;
     margin-right: 27px;
 `;
