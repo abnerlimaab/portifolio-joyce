@@ -1,4 +1,4 @@
-export default {
+const theme = {
   colors: {
     background: "#21201E",
     primary: "#FEA609",
@@ -15,3 +15,5 @@ export default {
     semiBold: "Rubik_600BSemiBold",
   },
 };
+
+export default theme;

@@ -1,7 +1,6 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { ButtonDestaque } from "../../components/Button/ButtonDestaque";
 import { Habilidades } from "../../components/Habilidades";
-import { NavBar } from "../../components/NavBar";
 import { 
     Apresentacao, 
     Descricao,
@@ -15,8 +14,12 @@ import {
  } from "./styles";
 
 import profile from "../../assets/images/profile.jpg";
+import { useNavigate } from "react-router-dom";
 
 export function Home() {
+
+  const navigate = useNavigate();
+
   const titulo = "Eu sou Joyce Amorim";
   const habilidades = ["POWER BI", "PYTHON", "EXCEL"];
   const descricao =
@@ -24,8 +27,6 @@ export function Home() {
 
   return (
     <Container>
-      <NavBar menuActive="Sobre" />
-
       <Apresentacao>
         <Titulo>{titulo}</Titulo>
 
@@ -33,7 +34,7 @@ export function Home() {
 
         <Descricao>{descricao}</Descricao>
 
-        <ButtonDestaque>Explore meu Trabalho</ButtonDestaque>
+        <ButtonDestaque onClick={() => navigate('/portfolio')}>Explore meu Trabalho</ButtonDestaque>
       </Apresentacao>
 
       <Profile>

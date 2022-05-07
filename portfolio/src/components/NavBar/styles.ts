@@ -19,4 +19,8 @@ export const MenuItem = styled.li<MenuItemProps>`
     color: ${({theme, isActive}) => isActive ? theme.colors.primary : theme.colors.text};
     font-size: 16px;
     margin-right: 27px;
+
+    :hover{
+        cursor: pointer;
+    }
 `;

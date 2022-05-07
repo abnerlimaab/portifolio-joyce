@@ -12,6 +12,10 @@ export const Button = styled.button`
     border: none;
     border-radius: 5px;
 
+    :hover{
+        cursor: pointer;
+    }
+
     animation: colorizeBackground 5s steps(60, end) 0s infinite alternate-reverse;
 
     @keyframes colorizeBackground {

@@ -1,24 +1,40 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { Container, MenuItem, MenuList } from "./styles";
 
 interface Props {
-    menuActive: 'Sobre' | 'Portfólio' | 'Contato';
+  menuActive: string;
 }
 
-export function NavBar({menuActive}: Props) {
-    return (
-        <Container>
-            <MenuList>
-                <MenuItem
-                 isActive={menuActive === 'Sobre'}
-                >Sobre</MenuItem>
-                <MenuItem
-                 isActive={menuActive === 'Portfólio'}
-                >Portfólio</MenuItem>
-                <MenuItem
-                 isActive={menuActive === 'Contato'}
-                >Contato</MenuItem>
-            </MenuList>
-        </Container>
-    )
+export function NavBar({ menuActive }: Props) {
+  const navigate = useNavigate();
+
+  function handleNavigate(uri: string) {
+    navigate(uri);
+  }
+
+  return (
+    <Container>
+      <MenuList>
+        <MenuItem
+          onClick={() => handleNavigate("/")}
+          isActive={menuActive === "sobre"}
+        >
+          Sobre
+        </MenuItem>
+        <MenuItem
+          onClick={() => handleNavigate("/portfolio")}
+          isActive={menuActive === "portfolio"}
+        >
+          Portfólio
+        </MenuItem>
+        <MenuItem
+          onClick={() => handleNavigate("/contato")}
+          isActive={menuActive === "contato"}
+        >
+          Contato
+        </MenuItem>
+      </MenuList>
+    </Container>
+  );
 }
